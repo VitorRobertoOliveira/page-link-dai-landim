@@ -23,7 +23,7 @@ Uma página de links personalizada para a cabeleireira **Dai Landim**, criada co
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/dai-landim-links.git
+   git clone https://github.com/VitorRobertoOliveira/page-link-dai-landim.git
    ```
 2. Acesse a pasta do projeto:
    ```bash
