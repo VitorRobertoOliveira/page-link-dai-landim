@@ -12,7 +12,7 @@ body {
 /* Estilos para o contêiner principal */
 .container {
     text-align: center;
-    background: #f5efe6;
+    background: linear-gradient(180deg, #f5efe6, #ffad60);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -102,7 +102,13 @@ h1 {
     /* Define a cor do texto do placeholder */
     font-family: "Montserrat", serif;
     font-size: medium;
+}
 
+.form-control::placeholder {
+    color: #764b36;
+    opacity: 1;
+    font-family: "Montserrat", serif;
+    font-size: medium;
 }
 
 /* Estilos para o botão de chamada para ação */
