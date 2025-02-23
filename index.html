@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dai Landim</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <img src="/assets/img/DaiLandim.jpg" alt="Dai Landim" class="profile-img">
+        <h1>Dai Landim</h1>
+        <div class="links">
+            <a href="https://www.instagram.com/dailandimcachos" target="_blank">Instagram</a>
+            <a href="https://api.whatsapp.com/send?phone=5534984401206" target="_blank">Agende seu Horário</a>
+            <a href="https://api.whatsapp.com/send?phone=5534984401206" target="_blank">Fale comigo</a>
+            <a href="https://www.instagram.com/studio_landimbeauty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">Studio Landim Beauty</a>
+            <a href="https://api.whatsapp.com/send?phone=553484135136" target="_blank">Whats Studio</a>
+        </div>
+    </div>
+    </div>
+    <!-- Modal Form -->
+    <div id="modalForm" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="contactForm">
+                <!-- <label for="nome">Nome:</label><br> -->
+                <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome" required>
+
+                <!-- <label for="telefone">Telefone:</label><br> -->
+                <input class="form-control" type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+
+                <!-- <label for="select">Selecione o serviço:</label><br> -->
+                <select class="form-control" name="select" id="select" placeholder="Selecione uma opção">
+                    <option value="" disabled selected>Selecione o Serviço</option>
+                    <option value="corte">Corte</option>
+                    <option value="hidratacao">Hidratação</option>
+                    <option value="mechas">Mechas</option>
+                    <option value="consultoria">Consultoria Capilar</option>
+                    <option value="coloracao">Coloração</option>
+                </select>
+
+                <a href="#" id="agendar-btn" class="cta-button" target="_blank">Agende um Horário</a>
+
+            </form>
+        </div>
+    </div>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+/* Estilos para o corpo */
+body {
+    background-color: #c78c4d;
+    font-family: "Montserrat", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    text-align: center;
+    background: #f5efe6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 15%;
+    position: absolute;
+}
+
+/* Estilos para a imagem de perfil */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Estilos para o título */
+h1 {
+    font-family: "Sacramento", serif;
+    font-size: 40px;
+    color: #5a3825;
+}
+
+/* Estilos para os links */
+.links a {
+    display: block;
+    text-decoration: none;
+    background: #fff;
+    color: #5a3825;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.links a:hover {
+    background: #e0d4c3;
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+    margin: 15% auto;
+    height: auto;
+    width: 15%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F2E5D7;
+    border: 1px solid #000;
+}
+
+/* Estilos para o formulário de contato */
+#contactForm {
+    display: block;
+
+}
+
+/* Estilos para os controles do formulário */
+.form-control {
+    width: 100%;
+    /* Define a largura como 100% do contêiner pai */
+    max-width: 400px;
+    /* Define uma largura máxima */
+    padding: 10px;
+    /* Adiciona padding interno */
+    margin-bottom: 10px;
+    /* Adiciona margem inferior */
+    box-sizing: border-box;
+    /* Inclui padding e borda na largura total */
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: #efe7dd;
+    color: #764b36;
+    /* Define a cor do texto do placeholder */
+    font-family: "Montserrat", serif;
+    font-size: medium;
+
+}
+
+/* Estilos para o botão de chamada para ação */
+.cta-button {
+    background-color: #9b4922;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Estilos para o botão de fechar o modal */
+.close {
+    color: #9b4922;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+
+}
