@@ -24,11 +24,10 @@ document.getElementById('agendar-btn').addEventListener('click', function(event)
 
     // Captura os valores dos campos do formulário
     const nome = document.getElementById('nome').value;
-    const telefone = document.getElementById('telefone').value;
     const servico = document.getElementById('select').value;
 
     // Constrói a mensagem
-    const mensagem = `Olá, meu nome é ${nome}.\nMeu telefone é ${telefone}.\nGostaria de agendar um serviço de ${servico}.\nQuais são os horários disponíveis ?`;
+    const mensagem = `Olá, meu nome é ${nome}.\nGostaria de agendar um serviço de ${servico}.\nQuais são os horários disponíveis ?`;
 
     // Constrói a URL do WhatsApp
     const url = `https://api.whatsapp.com/send?phone=5534984401206&text=${encodeURIComponent(mensagem)}`;

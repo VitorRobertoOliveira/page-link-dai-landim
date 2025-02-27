@@ -1,6 +1,9 @@
-/* Estilos para o corpo */
+/* Estilos para o corpo #c78c4d*/
 body {
-    background-color: #c78c4d;
+    /* background-color: #432818; */
+    /* background: linear-gradient(90deg, rgba(67, 40, 24, 0.8), rgba(67, 40, 24, 0.6)), url('/assets/img/tesoura.webp'); */
+    background: rgb(199,140,77);
+    background: linear-gradient(180deg, rgba(199,140,77,0.8) 31%, rgba(125,88,62,0.6) 75%);
     font-family: "Montserrat", serif;
     display: flex;
     justify-content: center;
@@ -12,20 +15,29 @@ body {
 /* Estilos para o contêiner principal */
 .container {
     text-align: center;
-    background: #f5efe6;
+    background: linear-gradient(180deg, rgba(245, 239, 230, 0.9), rgba(255, 173, 96, 0.9)),
+        url('/assets/img/tesoura.webp');
+    background-size: cover;
+    background-position: center;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 15%;
+    height: 70%;
+    width: 70%;
+    max-width: 400px;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Estilos para a imagem de perfil */
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -34,6 +46,14 @@ h1 {
     font-family: "Sacramento", serif;
     font-size: 40px;
     color: #5a3825;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+p {
+    font-size: 14px;
+    color: #5a3825;
+    margin: 0;
 }
 
 /* Estilos para os links */
@@ -43,7 +63,7 @@ h1 {
     background: #fff;
     color: #5a3825;
     padding: 10px;
-    margin: 10px 0;
+    margin: 15px 0;
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.3s;
@@ -70,39 +90,40 @@ h1 {
 .modal-content {
     margin: 15% auto;
     height: auto;
-    width: 15%;
+    width: 90%;
+    max-width: 400px;
     padding: 20px;
+    padding-top: 10px;
     border-radius: 10px;
     background-color: #F2E5D7;
     border: 1px solid #000;
+    text-align: center;
 }
 
 /* Estilos para o formulário de contato */
 #contactForm {
     display: block;
-
 }
 
 /* Estilos para os controles do formulário */
 .form-control {
     width: 100%;
-    /* Define a largura como 100% do contêiner pai */
     max-width: 400px;
-    /* Define uma largura máxima */
     padding: 10px;
-    /* Adiciona padding interno */
     margin-bottom: 10px;
-    /* Adiciona margem inferior */
     box-sizing: border-box;
-    /* Inclui padding e borda na largura total */
     border-radius: 10px;
     border: 1px solid #000;
     background-color: #efe7dd;
     color: #764b36;
-    /* Define a cor do texto do placeholder */
     font-family: "Montserrat", serif;
     font-size: medium;
+}
 
+.form-control::placeholder {
+    color: #764b36;
+    opacity: 1;
+    font-family: "Montserrat", serif;
 }
 
 /* Estilos para o botão de chamada para ação */
@@ -131,5 +152,29 @@ h1 {
 .close:focus {
     text-decoration: none;
     cursor: pointer;
+}
 
+/* Media Queries para responsividade */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .profile-img {
+        width: 90px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
 }
