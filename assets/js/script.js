@@ -23,8 +23,11 @@ document.getElementById('agendar-btn').addEventListener('click', function(event)
     event.preventDefault(); // Impede o comportamento padrão do link
 
     // Captura os valores dos campos do formulário
-    const nome = document.getElementById('nome').value;
-    const servico = document.getElementById('select').value;
+    const nomeInput = document.getElementById('nome');
+    const servicoInput = document.getElementById('select');
+
+    const nome = nomeInput.value;
+    const servico = servicoInput.value;
 
     // Constrói a mensagem
     const mensagem = `Olá, meu nome é ${nome}.\nGostaria de agendar um serviço de ${servico}.\nQuais são os horários disponíveis ?`;
@@ -32,6 +35,13 @@ document.getElementById('agendar-btn').addEventListener('click', function(event)
     // Constrói a URL do WhatsApp
     const url = `https://api.whatsapp.com/send?phone=5534984401206&text=${encodeURIComponent(mensagem)}`;
 
-    // Redireciona o usuário para a URL do WhatsApp
+    // Redireciona o usuário para o WhatsApp
     window.open(url, '_blank');
+
+    // Limpa os campos do formulário
+    nomeInput.value = "";
+    servicoInput.value = "";
+
+    // Opcional: Fechar o modal se necessário
+    document.getElementById("modalForm").style.display = "none";
 });
