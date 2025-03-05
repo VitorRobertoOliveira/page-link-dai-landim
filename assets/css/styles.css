@@ -182,6 +182,12 @@ p {
         left: 50%;
         transform: translate(-50%, -50%)
     }
+
+    .close:hover,
+    .close:focus {
+        text-decoration: none;
+        cursor: pointer;
+    }
 }
 
 @media (max-width: 400px) {
@@ -210,5 +216,11 @@ p {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%)
+    }
+
+    .close:active,
+    .close:focus {
+        text-decoration: none;
+        cursor: pointer;
     }
 }
