@@ -90,7 +90,7 @@ p {
 .modal-content {
     margin: 15% auto;
     height: auto;
-    width: 15%;
+    width: 80%;
     max-width: 400px;
     padding: 20px;
     padding-top: 10px;
@@ -148,14 +148,14 @@ p {
     font-weight: bold;
 }
 
-.close:hover,
+.close:active,
 .close:focus {
     text-decoration: none;
     cursor: pointer;
 }
 
 /* Media Queries para responsividade */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .container {
         height: 60%;
         width: 80%;
