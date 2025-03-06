@@ -55,6 +55,27 @@ p {
     margin: 0;
 }
 
+.heading-modal h2 {
+    font-family: "Montserrat", serif;
+    margin-left: 8px;
+    font-size: 20px;
+    color: #5a3825;
+}
+
+.heading-modal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #5a3825;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 10px 0px;
+}
+
 /* Estilos para os links */
 .links a {
     display: block;
@@ -70,11 +91,12 @@ p {
 }
 
 .links a:active {
-    background: #e0d4c3;
+    background: linear-gradient(to right, #fff, #f2ebe6);
 }
 
 /* Estilos para o modal */
 .modal {
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -94,7 +116,6 @@ p {
     margin: 15% auto;
     height: auto;
     padding: 20px;
-    padding-top: 10px;
     border-radius: 10px;
     background-color: #F2E5D7;
     border: 1px solid #000;
@@ -103,7 +124,7 @@ p {
 
 /* Animação para o modal */
 .modal-content {
-    animation: .4s anim-modal;
+    animation: .3s anim-modal;
 }
 
 @keyframes anim-modal {
@@ -197,6 +218,11 @@ p {
         width: 65%;
         position: fixed;
     }
+
+    .heading-modal h2 {
+        margin: 0 0 0 8px;
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -222,5 +248,10 @@ p {
     .modal-content {
         width: 65%;
         position: fixed;
+    }
+
+    .heading-modal h2 {
+        margin: 0 0 0 8px;
+        font-size: 16px;
     }
 }

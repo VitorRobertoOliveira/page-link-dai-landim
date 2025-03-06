@@ -1,23 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
     var modal = document.getElementById("modalForm");
     var btn = document.querySelector('a[href="https://api.whatsapp.com/send?phone=5534984401206"]');
-    var span = document.getElementsByClassName("close")[0];
+    var closeButton = document.querySelector('.close'); 
 
-    btn.addEventListener('click', function (event) {
-        event.preventDefault();
-        modal.style.display = "flex";
-    });
+    // Garante que o modal esteja oculto ao carregar a página
+    modal.style.display = "none";
 
-    span.onclick = function () {
-        modal.style.display = "none";
+    // Verifica se o botão de abrir modal existe antes de adicionar o evento
+    if (btn) {
+        btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            modal.style.display = "flex";
+        });
     }
 
+    // Evento para fechar o modal usando a classe close
+    if (closeButton) {
+        closeButton.addEventListener('click', function () {
+            modal.style.display = "none";
+        });
+    }
+
+    // Fecha o modal ao clicar fora do conteúdo
     window.onclick = function (event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
-    }
+    };
 });
+
 
 document.getElementById('agendar-btn').addEventListener('click', function (event) {
     event.preventDefault();
