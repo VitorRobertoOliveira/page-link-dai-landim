@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btn.addEventListener('click', function (event) {
         event.preventDefault();
-        modal.style.display = "block";
+        modal.style.display = "flex";
     });
 
     span.onclick = function () {
