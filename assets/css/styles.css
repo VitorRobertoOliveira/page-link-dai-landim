@@ -46,14 +46,14 @@ body {
 }
 
 .carousel-slide img {
-    height: 213px;
+    height: 200px;
     width: 30%;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-slide video {
-    height: 213px;
+    height: 200px;
     width: 30%;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
