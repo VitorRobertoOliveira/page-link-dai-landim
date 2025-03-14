@@ -15,8 +15,7 @@ body {
     background: #c88a36;
     background-size: cover;
     background-position: center;
-    padding: 20px;
-    height: 70%;
+    padding: 15px;
     width: 70%;
     max-width: 400px;
     position: absolute;
@@ -43,16 +42,21 @@ body {
     justify-content: space-around;
     justify-content: center;
     gap: 10px; /* Adiciona um espaçamento uniforme */
+    margin: 10px 0 10px 0;
 }
 
 .carousel-slide img {
     height: 150px;
     width: 30%;
-    /* Ajuste para caber várias imagens lado a lado */
     border-radius: 10px;
-    /* Para cantos arredondados, se necessário */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Para um leve efeito de sombra */
+}
+
+.carousel-slide video {
+    height: 150px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para a imagem de perfil */
@@ -102,6 +106,12 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 0px 0px 10px 0px;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .links a {
@@ -241,9 +251,8 @@ p {
 /* Media Queries para responsividade */
 @media (max-width: 800px) {
     .container {
-        height: 80%;
-        width: 80%;
-        padding: 20px;
+        width: 90%;
+        padding: 10px;
     }
 
     .profile-img {
@@ -272,8 +281,7 @@ p {
 
 @media (max-width: 375px) {
     .container {
-        height: 90%;
-        width: 80%;
+        width: 90%;
         padding: 10px;
     }
 
