@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    window.scrollTo(0, 0);
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById("modalForm");
     const btn = document.querySelector('a[href="https://api.whatsapp.com/send?phone=5534984401206"]');
