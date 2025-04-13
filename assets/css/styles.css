@@ -99,6 +99,7 @@ body {
     margin: auto;
     object-fit: cover;
     margin-top: 1rem !important;
+    padding-bottom: 12px !important;
 }
 
 /* Estilos para o título */
