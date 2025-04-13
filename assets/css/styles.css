@@ -354,7 +354,7 @@ p {
     .profile-img {
         width: 120px;
         height: 120px;
-        margin-top: 1rem;
+        margin-top: env(safe-area-inset-top, 1rem);
     }
 
     h1 {
