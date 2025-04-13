@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Roboto&family=Poppins&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Roboto&family=Poppins&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
@@ -25,7 +25,7 @@
 <body>
     <main>
         <div class="container">
-            <img src="/assets/img/DaiMaior.png" alt="Dai Landim" class="profile-img">
+            <img src="/assets/img/LogoFigmaMaior.svg" alt="Dai Landim" class="profile-img">
             <h1>Dai Landim Cachos</h1>
             <p>Te ajudo a descobrir sua melhor versão!</p><br>
             <div class="carousel-container">
@@ -85,30 +85,25 @@
         <div id="modalForm" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="heading-modal">
-                        <i class="bi bi-scissors"></i>
-                        <h2>Preencha os dados</h2>
-                    </div>
                     <div class="close">
                         <i class="bi bi-x"></i>
                     </div>
                 </div>
-                <form id="contactForm">
-                    <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome" required>
-                    <select class="form-control" name="select" id="select">
-                        <option value="" disabled selected>Selecione o Serviço</option>
-                        <option value="corte">Corte</option>
-                        <option value="tratamento capilar">Tratamento capilar</option>
-                        <option value="consultoria">Consultoria capilar</option>
-                        <option value="mechas">Mechas</option>
-                        <option value="coloracao total">Coloração total</option>
-                        <option value="retoque de raiz">Retoque de raiz</option>
-                        <option value="lavagem e finalização">Lavagem e finalização</option>
-                        <option value="Avaliação capilar">Avaliação capilar</option>
-                        <option value="Penteado">Penteado</option>
-                    </select>
-                    <button type="submit" id="agendar-btn" target="_blank" class="cta-button">Enviar</button>
-                </form>
+                <div class="modal-links">
+                    <ul>
+                        <li>
+                            <a href="https://calendly.com/daianecristinalandimdasilva/60min" class="custom-button-modal" target="_blank">
+                                <span>Agendar corte e serviços</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://calendly.com/daianecristinalandimdasilva/dai-landim-cachos-mechas" class="custom-button-modal" target="_blank">
+                                <span>Agendar mechas</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </main>

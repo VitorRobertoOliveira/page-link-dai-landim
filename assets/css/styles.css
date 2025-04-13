@@ -4,9 +4,14 @@ body {
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'RocaOneRegular';
+    src: url('/assets/font/roca-one-regular.ttf') format('truetype');
+}
+
 main {
     background: #c88a36;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,14 +74,13 @@ main {
 .profile-img {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
     object-fit: cover;
     margin-top: 10px;
 }
 
 /* Estilos para o título */
 h1 {
-    font-family: "Poppins", serif;
+    font-family: "RocaOneRegular", serif;
     font-size: 40px;
     font-weight: 700;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
@@ -86,14 +90,15 @@ h1 {
 }
 
 p {
+    font-family: "RocaOneRegular", serif;
     font-size: 14px;
     font-weight: 550;
     color: #F2EFEB;
     margin: 0;
 }
 
-.heading-modal h2 {
-    font-family: "Montserrat", serif;
+/* .heading-modal h2 {
+    font-family: "RocaOneRegular", serif;
     margin-left: 8px;
     font-size: 20px;
     font-weight: 600;
@@ -106,15 +111,22 @@ p {
     align-items: center;
     color: #470713;
 }
+*/
 
 .modal-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     padding: 0px 0px 10px 0px;
 }
 
 .links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-links ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -130,11 +142,28 @@ p {
     padding: 10px 20px;
     margin: 16px 0;
     border-radius: 30px;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.5;
     transition: background 0.3s;
     box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.4);
+}
+
+.modal-links a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    background: #c88a36;
+    color: #fff;
+    padding: 12px 24px;
+    margin: 0 0 16px 0;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: background 0.3s;
+    box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.2);
 }
 
 .custom-button img {
@@ -147,6 +176,13 @@ p {
 
 .custom-button span {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Evita quebra de linha */
+}
+
+.custom-button-modal span {
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap; /* Evita quebra de linha */
@@ -204,7 +240,7 @@ p {
 }
 
 /* Estilos para os controles do formulário */
-.form-control {
+/* .form-control {
     width: 100%;
     max-width: 400px;
     padding: 10px;
@@ -215,18 +251,18 @@ p {
     background: linear-gradient(to right, #fff, #f2ebe6);
     box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.4);
     color: #470713;
-    font-family: "Montserrat", serif;
+    font-family: "RocaOneRegular", serif;
     font-size: medium;
 }
 
 .form-control::placeholder {
     color: #470713;
     opacity: 1;
-    font-family: "Montserrat", serif;
-}
+    font-family: "RocaOneRegular", serif;
+} */
 
 /* Estilos para o botão de chamada para ação */
-.cta-button {
+/* .cta-button {
     background-color: #c88a36;
     box-shadow: 2px 4px 6px 2px rgba(0, 0, 0, 0.4);
     color: #470713;
@@ -238,10 +274,10 @@ p {
     text-align: center;
     box-sizing: border-box;
     width: 100%;
-    font-family: "Montserrat", serif;
+    font-family: "RocaOneRegular", serif;
     font-size: 16px;
     font-weight: 500;
-}
+} */
 
 /* Estilos para o botão de fechar o modal */
 .close {
@@ -277,11 +313,11 @@ p {
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .modal-content {
@@ -297,7 +333,7 @@ p {
 
 @media (max-width: 375px) {
     main {
-        min-height: 130dvh;
+        min-height: 134dvh;
     }
 
     .container {
@@ -309,15 +345,19 @@ p {
     .profile-img {
         width: 120px;
         height: 120px;
-        margin-top: 30px;
+        margin-top: 80px;
     }
 
     h1 {
-        font-size: 26px;
+        font-size: 32px;
     }
 
     p {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .links a {
+        font-size: 14px
     }
 
     .modal-content {
