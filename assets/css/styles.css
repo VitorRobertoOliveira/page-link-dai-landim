@@ -2,14 +2,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'RocaOneRegular';
-    src: url('/assets/font/roca-one-regular.ttf') format('truetype');
-}
-
-main {
     background: #c88a36;
     font-family: "Inter", sans-serif;
     display: flex;
@@ -19,6 +11,22 @@ main {
     margin: 0;
     letter-spacing: normal;
 }
+
+@font-face {
+    font-family: 'RocaOneRegular';
+    src: url('/assets/font/roca-one-regular.ttf') format('truetype');
+}
+
+/* main {
+    background: #c88a36;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 105dvh;
+    margin: 0;
+    letter-spacing: normal;
+} */
 
 /* Estilos para o contêiner principal */
 .container {
