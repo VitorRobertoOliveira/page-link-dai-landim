@@ -60,8 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
-
-    // Carrossel Melhorado
+    // Carrossel
     const carousel = document.querySelector('.carousel');
     const slides = document.querySelectorAll('.carousel-slide');
 
@@ -70,12 +69,17 @@ document.addEventListener('DOMContentLoaded', function () {
         let startPos = 0;
         let currentTranslate = 0;
         let prevTranslate = 0;
-        let currentIndex = 0;
         let animationID;
 
+        // Calcula os limites corretamente
+        const slideWidth = slides[0].children[0].clientWidth;
+        const maxTranslate = 0; // Primeiro slide
+        const minTranslate = -(slideWidth * (slides[0].children.length - 3)); // Último slide
+        console.log("slideWidth:", slideWidth);
+
+        // Eventos
         carousel.addEventListener('mousedown', startDrag);
         carousel.addEventListener('touchstart', startDrag, { passive: true });
-
         carousel.addEventListener('mouseup', endDrag);
         carousel.addEventListener('mouseleave', endDrag);
         carousel.addEventListener('touchend', endDrag);
@@ -83,9 +87,11 @@ document.addEventListener('DOMContentLoaded', function () {
         function startDrag(event) {
             isDragging = true;
             startPos = getPositionX(event);
-            carousel.classList.add('grabbing'); // Adiciona uma classe para indicar que está sendo arrastado
+            console.log("startPos inicial:", startPos);
 
-            // Adicionar eventos de movimento apenas enquanto estiver arrastando
+            carousel.style.transition = 'none'; // Remove transição durante o arrasto
+            carousel.classList.add('grabbing');
+
             window.addEventListener('mousemove', drag);
             window.addEventListener('touchmove', drag, { passive: true });
 
@@ -95,43 +101,47 @@ document.addEventListener('DOMContentLoaded', function () {
         function drag(event) {
             if (!isDragging) return;
             const currentPosition = getPositionX(event);
+
+
             currentTranslate = prevTranslate + currentPosition - startPos;
         }
 
         function endDrag() {
+            if (!isDragging) return;
+
             isDragging = false;
             cancelAnimationFrame(animationID);
             carousel.classList.remove('grabbing');
 
-            // Remove os eventos de movimento após soltar o clique
             window.removeEventListener('mousemove', drag);
             window.removeEventListener('touchmove', drag);
 
-            const slideWidth = carousel.clientWidth;
-            currentIndex = Math.round(-currentTranslate / slideWidth);
-            currentIndex = Math.max(0, Math.min(currentIndex, slides.length - 1));
+            // Limita o movimento para não ultrapassar os limites do carrossel
+            if (currentTranslate > maxTranslate) {
+                currentTranslate = maxTranslate;
+            } else if (currentTranslate < minTranslate) {
+                currentTranslate = minTranslate;
+            }
 
-            currentTranslate = -currentIndex * slideWidth;
             prevTranslate = currentTranslate;
-            setSlidePosition(true);
+            setSlidePosition();
+
+            // Aplica transição suave para onde o usuário soltou
+            carousel.style.transition = 'transform 0.3s ease-out';
+            setSlidePosition();
+        }
+
+        function setSlidePosition() {
+            carousel.style.transform = `translateX(${currentTranslate}px)`;
         }
 
         function getPositionX(event) {
-            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+            return event.type.includes('mouse') ? event.pageX : event.touches[0]?.clientX;
         }
 
         function animation() {
             setSlidePosition();
             if (isDragging) requestAnimationFrame(animation);
-        }
-
-        function setSlidePosition(animate = false) {
-            if (animate) {
-                carousel.style.transition = "transform 0.3s ease-out";
-            } else {
-                carousel.style.transition = "none";
-            }
-            carousel.style.transform = `translateX(${currentTranslate}px)`;
         }
     }
 });
