@@ -318,6 +318,7 @@ p {
         width: 120px;
         height: 120px;
         margin: 0 auto;
+        margin-top: 1rem;
     }
 
     h1 {
@@ -353,7 +354,7 @@ p {
     .profile-img {
         width: 120px;
         height: 120px;
-        margin-top: 80px;
+        margin-top: 1rem;
     }
 
     h1 {
