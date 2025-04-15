@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const slideWidth = slides[0].children[0].clientWidth;
         const maxTranslate = 0; // Primeiro slide
         const minTranslate = -(slideWidth * (slides[0].children.length - 3)); // Último slide
-        console.log("slideWidth:", slideWidth);
 
         // Eventos
         carousel.addEventListener('mousedown', startDrag);
@@ -87,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
         function startDrag(event) {
             isDragging = true;
             startPos = getPositionX(event);
-            console.log("startPos inicial:", startPos);
 
             carousel.style.transition = 'none'; // Remove transição durante o arrasto
             carousel.classList.add('grabbing');

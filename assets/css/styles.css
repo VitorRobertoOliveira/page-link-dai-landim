@@ -162,14 +162,16 @@ p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    white-space: nowrap; /* Evita quebra de linha */
+    white-space: nowrap;
+    /* Evita quebra de linha */
 }
 
 .custom-button-modal span {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    white-space: nowrap; /* Evita quebra de linha */
+    white-space: nowrap;
+    /* Evita quebra de linha */
 }
 
 .links a:active {
