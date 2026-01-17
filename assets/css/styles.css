@@ -360,6 +360,7 @@ p {
         /* Estilos para o rodapé de redes sociais */
         .social-footer {
             text-align: center;
+            padding-bottom: 10px;
             display: flex;
             justify-content: center;
             gap: 20px;

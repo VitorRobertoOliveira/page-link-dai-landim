@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById("modalForm");
-    const btn = document.querySelector('a[href="https://api.whatsapp.com/send?phone=5534984401206"]');
+    const btn = document.getElementById('btn-agendar'); // Alterado para usar o ID
     const closeButton = document.querySelector('.close');
     const agendarBtn = document.getElementById('agendar-btn');
 
@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
     if (btn) {
         btn.addEventListener('click', function (event) {
             event.preventDefault();
+            
+            // Envia o evento para o Google Analytics
+            if (typeof gtag === 'function') {
+                gtag('event', 'click', {
+                  'event_category': 'engagement',
+                  'event_label': 'abrir_modal_agendamento'
+                });
+            }
+
             modal.style.display = "flex";
         });
     }
@@ -86,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Eventos
         carousel.addEventListener('mousedown', startDrag);
-        carousel.addEventListener('touchstart', startDrag, { passive: true });
+        carousel.addEventListener('touchstart', startDrag, { passive: false });
         carousel.addEventListener('mouseup', endDrag);
         carousel.addEventListener('mouseleave', endDrag);
         carousel.addEventListener('touchend', endDrag);
@@ -99,17 +108,19 @@ document.addEventListener('DOMContentLoaded', function () {
             carousel.classList.add('grabbing');
 
             window.addEventListener('mousemove', drag);
-            window.addEventListener('touchmove', drag, { passive: true });
+            window.addEventListener('touchmove', drag, { passive: false });
 
             animationID = requestAnimationFrame(animation);
         }
 
         function drag(event) {
-            if (!isDragging) return;
-            const currentPosition = getPositionX(event);
-
-
-            currentTranslate = prevTranslate + currentPosition - startPos;
+            if (isDragging) {
+                if (event.type === 'touchmove') {
+                    event.preventDefault();
+                }
+                const currentPosition = getPositionX(event);
+                currentTranslate = prevTranslate + currentPosition - startPos;
+            }
         }
 
         function endDrag() {
@@ -166,4 +177,37 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // --- Início do Rastreamento de Cliques ---
+
+    // Função auxiliar para rastrear cliques em elementos por ID
+    function trackClick(elementId, eventName) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'click', {
+                        'event_category': 'engagement',
+                        'event_label': eventName
+                    });
+                }
+            });
+        }
+    }
+
+    // Rastreia cliques nos links principais
+    trackClick('btn-feedback', 'click_feedback');
+    trackClick('btn-instagram', 'click_instagram_principal');
+    trackClick('btn-whatsapp', 'click_whatsapp');
+    trackClick('btn-localizacao', 'click_localizacao');
+
+    // Rastreia cliques nos links do modal
+    trackClick('btn-modal-corte', 'click_calendly_corte');
+    trackClick('btn-modal-mechas', 'click_calendly_mechas');
+
+    // Rastreia cliques nos links do rodapé
+    trackClick('btn-footer-instagram', 'click_instagram_rodape');
+    trackClick('btn-footer-tiktok', 'click_tiktok_rodape');
+
+    // --- Fim do Rastreamento de Cliques ---
 });

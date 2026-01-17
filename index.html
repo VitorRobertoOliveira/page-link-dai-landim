@@ -21,6 +21,15 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU_ID_DE_METRICA_AQUI"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NSMC95XN5P');
+    </script>
 </head>
 
 <body>
@@ -33,31 +42,31 @@
                 <div class="carousel">
                     <div class="carousel-slide">
                         <div class="video-wrapper">
-                            <video autoplay loop muted playsinline>
+                            <video autoplay loop muted playsinline preload="metadata">
                                 <source src="/assets/img/DaiCorteMasc.mp4" type="video/mp4">
                             </video>
                             <i class="bi bi-heart like-btn"></i>
                         </div>
                         <div class="video-wrapper">
-                            <video autoplay loop muted playsinline>
+                            <video autoplay loop muted playsinline preload="metadata">
                                 <source src="/assets/img/DaiCorteFem.mp4" type="video/mp4">
                             </video>
                             <i class="bi bi-heart like-btn"></i>
                         </div>
                         <div class="video-wrapper">
-                            <video autoplay loop muted playsinline>
+                            <video autoplay loop muted playsinline preload="metadata">
                                 <source src="/assets/img/DaiLavador.mp4" type="video/mp4">
                             </video>
                             <i class="bi bi-heart like-btn"></i>
                         </div>
                         <div class="video-wrapper">
-                            <video autoplay loop muted playsinline>
+                            <video autoplay loop muted playsinline preload="metadata">
                                 <source src="/assets/img/v1.mp4" type="video/mp4">
                             </video>
                             <i class="bi bi-heart like-btn"></i>
                         </div>
                         <div class="video-wrapper">
-                            <video autoplay loop muted playsinline>
+                            <video autoplay loop muted playsinline preload="metadata">
                                 <source src="/assets/img/v2.mp4" type="video/mp4">
                             </video>
                             <i class="bi bi-heart like-btn"></i>
@@ -69,35 +78,35 @@
             <nav class="links">
                 <ul>
                     <li>
-                        <a href="https://api.whatsapp.com/send?phone=5534984401206" class="custom-button"
+                        <a id="btn-agendar" href="https://api.whatsapp.com/send?phone=5534984401206" class="custom-button"
                             target="_blank">
-                            <img src="/assets/img/b1.jpeg" alt="img 1">
+                            <img src="/assets/img/b1.jpeg" alt="img 1" loading="lazy">
                             <span>Agendar Horário</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://g.co/kgs/NanfRpL" class="custom-button" target="_blank">
-                            <img src="/assets/img/b2.jpeg" alt="img 1">
+                        <a id="btn-feedback" href="https://g.co/kgs/NanfRpL" class="custom-button" target="_blank">
+                            <img src="/assets/img/b2.jpeg" alt="img 1" loading="lazy">
                             <span>Dê seu feedback</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/dailandimcachos" class="custom-button" target="_blank">
-                            <img src="/assets/img/b3.jpeg" alt="img 1">
+                        <a id="btn-instagram" href="https://www.instagram.com/dailandimcachos" class="custom-button" target="_blank">
+                            <img src="/assets/img/b3.jpeg" alt="img 1" loading="lazy">
                             <span>Instagram</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://api.whatsapp.com/send?phone=5534984401206" class="custom-button"
+                        <a id="btn-whatsapp" href="https://api.whatsapp.com/send?phone=5534984401206" class="custom-button"
                             target="_blank">
-                            <img src="/assets/img/produto.png" alt="img 1">
+                            <img src="/assets/img/produto.png" alt="img 1" loading="lazy">
                             <span>Whatsapp</span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.google.com/maps/place/Dai+Landim+Cachos/@-18.9106306,-48.3174662,17z/data=!4m6!3m5!1s0x94a4455ad44b9697:0xe01c16f15757ae39!8m2!3d-18.9099448!4d-48.3157109!16s%2Fg%2F11vf00cyb8?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D"
+                        <a id="btn-localizacao" href="https://www.google.com/maps/place/Dai+Landim+Cachos/@-18.9106306,-48.3174662,17z/data=!4m6!3m5!1s0x94a4455ad44b9697:0xe01c16f15757ae39!8m2!3d-18.9099448!4d-48.3157109!16s%2Fg%2F11vf00cyb8?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D"
                             class="custom-button" target="_blank">
-                            <img src="/assets/img/b5.jpeg" alt="img 1">
+                            <img src="/assets/img/b5.jpeg" alt="img 1" loading="lazy">
                             <span>Nossa localização</span>
                         </a>
                     </li>
@@ -115,13 +124,13 @@
                 <div class="modal-links">
                     <ul>
                         <li>
-                            <a href="https://calendly.com/daianecristinalandimdasilva/60min" class="custom-button-modal"
+                            <a id="btn-modal-corte" href="https://calendly.com/daianecristinalandimdasilva/60min" class="custom-button-modal"
                                 target="_blank">
                                 <span>Agendar corte e serviços</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://calendly.com/daianecristinalandimdasilva/dai-landim-cachos-mechas"
+                            <a id="btn-modal-mechas" href="https://calendly.com/daianecristinalandimdasilva/dai-landim-cachos-mechas"
                                 class="custom-button-modal" target="_blank">
                                 <span>Agendar mechas</span>
                             </a>
@@ -132,14 +141,14 @@
         </div>
     </main>
     <footer class="social-footer">
-        <a href="https://www.instagram.com/dailandimcachos" target="_blank" aria-label="Instagram">
+        <a id="btn-footer-instagram" href="https://www.instagram.com/dailandimcachos" target="_blank" aria-label="Instagram">
             <i class="bi bi-instagram"></i>
         </a>
-        <a href="https://www.tiktok.com/@dailandimcachos" target="_blank" aria-label="TikTok">
+        <a id="btn-footer-tiktok" href="https://www.tiktok.com/@dailandimcachos" target="_blank" aria-label="TikTok">
             <i class="bi bi-tiktok"></i>
         </a>
     </footer>
-    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/script.js" defer></script>
 </body>
 
 </html>
