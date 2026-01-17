@@ -365,7 +365,8 @@ p {
             gap: 20px;
         }
         
-        .social-footer a {
+        .social-footer a,
+        .social-footer a:visited {
             color: #F2EFEB; /* Cor dos ícones */
             font-size: 28px; /* Tamanho dos ícones */
             transition: color 0.3s;
