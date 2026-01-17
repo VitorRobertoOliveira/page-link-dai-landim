@@ -71,10 +71,18 @@ document.addEventListener('DOMContentLoaded', function () {
         let prevTranslate = 0;
         let animationID;
 
-        // Calcula os limites corretamente
-        const slideWidth = slides[0].children[0].clientWidth;
-        const maxTranslate = 0; // Primeiro slide
-        const minTranslate = -(slideWidth * (slides[0].children.length - 3)); // Último slide
+        // Calcula os limites corretamente de forma dinâmica
+        const carouselContainer = document.querySelector('.carousel-container');
+        const slideChildren = slides[0].children;
+        const slideWidth = slideChildren[0].clientWidth;
+        const gap = 10; // Valor do gap definido no CSS
+
+        const contentWidth = (slideChildren.length * slideWidth) + ((slideChildren.length - 1) * gap);
+        const containerWidth = carouselContainer.clientWidth;
+        
+        const maxTranslate = 0; // Posição inicial
+        // O ponto final é a diferença entre a largura total do conteúdo e a largura visível do contêiner
+        const minTranslate = -(contentWidth - containerWidth);
 
         // Eventos
         carousel.addEventListener('mousedown', startDrag);
@@ -142,4 +150,20 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isDragging) requestAnimationFrame(animation);
         }
     }
+
+    // Like button functionality
+    const likeButtons = document.querySelectorAll('.like-btn');
+
+    likeButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            // Toggle between heart and heart-fill
+            if (button.classList.contains('bi-heart')) {
+                button.classList.remove('bi-heart');
+                button.classList.add('bi-heart-fill');
+            } else {
+                button.classList.remove('bi-heart-fill');
+                button.classList.add('bi-heart');
+            }
+        });
+    });
 });
